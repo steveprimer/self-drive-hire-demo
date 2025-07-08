@@ -1,4 +1,6 @@
 import React from "react";
+import aromatteImg from "../assets/aromatte1.jpg";
+import portfolioImg from "../assets/portfolio.jpg";
 
 const OurWork = () => {
   const projects = [
@@ -6,14 +8,14 @@ const OurWork = () => {
       title: "Aromatte Luxe",
       description:
         "A full-stack luxury perfume brand built with React, Node.js, MongoDB, and Razorpay.",
-      image: "../src/assets/aromatte1.jpg", // Replace with your actual image path
+      image: aromatteImg, // Replace with your actual image path
       link: "https://aromatteluxe.netlify.app",
     },
     {
       title: "Developer Portfolio",
       description:
         "Personal developer portfolio showcasing modern UI design and client-ready services.",
-      image: "../src/assets/portfolio.jpg", // Replace with your actual image path
+      image: portfolioImg, // Replace with your actual image path
       link: "https://ansonstephan.netlify.app",
     },
   ];
