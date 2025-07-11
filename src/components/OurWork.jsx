@@ -7,14 +7,14 @@ const OurWork = () => {
     {
       title: "Aromatte Luxe",
       description:
-        "A full-stack luxury perfume brand built with React, Node.js, MongoDB, and Razorpay.",
+        "Helped launch a luxury fragrance brand online with a clean, fast, and mobile-first eCommerce store — complete with product showcase and online payment flow.",
       image: aromatteImg, // Replace with your actual image path
       link: "https://aromatteluxe.netlify.app",
     },
     {
       title: "Developer Portfolio",
       description:
-        "Personal developer portfolio showcasing modern UI design and client-ready services.",
+        "Clean, mobile-friendly portfolio crafted to clearly communicate services and build trust with potential clients.",
       image: portfolioImg, // Replace with your actual image path
       link: "https://ansonstephan.netlify.app",
     },
