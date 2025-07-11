@@ -55,7 +55,7 @@ const Navbar = () => {
               smooth={true}
               duration={600}
               spy={true}
-              offset={-50}
+              offset={-10}
               activeClass="active"
               className="hover:text-blue-400 cursor-pointer"
             >
