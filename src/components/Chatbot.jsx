@@ -10,6 +10,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef(null);
+  const [showPopup, setShowPopup] = useState(false);
 
  const storeInfo = `
 Store Name: ScaleBridge
@@ -34,7 +35,14 @@ To help service-based and eCommerce businesses save time, convert more, and scal
 
   
 
-  
+  // Place this in your root layout component or inside Chatbot.jsx
+useEffect(() => {
+  const timer = setTimeout(() => setShowPopup(true), 8000);
+  return () => clearTimeout(timer);
+}, []);
+
+
+
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -99,6 +107,20 @@ To help service-based and eCommerce businesses save time, convert more, and scal
   }
 `}</style>
 
+    {showPopup && (
+  <div className="fixed bottom-6 right-20 bg-[#0f172a] text-white border border-blue-600 rounded-lg shadow-lg px-4 py-3 z-[9999] animate-fadeIn">
+    <p className="text-md">💬 Chat with our AI assistant for instant help!</p>
+    <button
+      onClick={() => {
+        setShowPopup(false);
+        setIsOpen(true);
+      }}
+      className="mt-2 text-blue-400 underline text-sm"
+    >
+      Open Chat
+    </button>
+  </div>
+)}
       
 
       {/* Floating Button */}
