@@ -1,24 +1,35 @@
 import React from "react";
 import aromatteImg from "../assets/aromatte1.jpg";
 import portfolioImg from "../assets/portfolio.jpg";
+import chatbotImg from "../assets/chatbot.jpg"; 
+
 
 const OurWork = () => {
   const projects = [
-    {
-      title: "Aromatte Luxe",
-      description:
-        "Helped launch a luxury fragrance brand online with a clean, fast, and mobile-first eCommerce store — complete with product showcase and online payment flow.",
-      image: aromatteImg, // Replace with your actual image path
-      link: "https://aromatteluxe.netlify.app",
-    },
-    {
-      title: "Developer Portfolio",
-      description:
-        "Clean, mobile-friendly portfolio crafted to clearly communicate services and build trust with potential clients.",
-      image: portfolioImg, // Replace with your actual image path
-      link: "https://ansonstephan.netlify.app",
-    },
-  ];
+  {
+    title: "Aromatte Luxe",
+    description:
+      "Helped launch a luxury fragrance brand online with a clean, fast, and mobile-first eCommerce store — complete with product showcase and online payment flow.",
+    image: aromatteImg,
+    link: "https://aromatteluxe.netlify.app",
+  },
+  
+  {
+    title: "AI Customer Support Bot",
+    description:
+      "Deployed an AI-powered chatbot that answers 70%+ of customer queries instantly, reducing support workload and increasing response speed.",
+    image: chatbotImg, 
+    link: "https://aichat-support.netlify.app", 
+  },
+  {
+    title: "Developer Portfolio",
+    description:
+      "Clean, mobile-friendly portfolio crafted to clearly communicate services and build trust with potential clients.",
+    image: portfolioImg,
+    link: "https://ansonstephan.netlify.app",
+  },
+];
+
 
   return (
     <section id="work" className="bg-gradient-to-r from-black via-[#001233] to-black
