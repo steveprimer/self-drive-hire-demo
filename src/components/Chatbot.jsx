@@ -51,7 +51,8 @@ useEffect(() => {
   useEffect(() => {
     if (isOpen && chat.length === 0) {
       setIsTyping(true);
-      const welcomeText = "Hi there! 👋 I'm your AI assistant. Feel free to ask me anything about our products, shipping, or return policies!";
+      const welcomeText = "Hi there! 👋 I'm your AI assistant from ScaleBridge. Ask me anything about our services—web development, AI chatbots, automation, or outreach campaigns. I'm here to help!";
+
       setTimeout(() => {
         const botMessage = { sender: "Bot", text: welcomeText };
         setChat([botMessage]);
