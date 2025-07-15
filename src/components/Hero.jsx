@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import heroVideo from "../assets/heroVideo.mp4";
+import CalendlyPopupButton from "../components/Calendly";
 
 const Navbar = () => {
   return (
@@ -95,14 +96,15 @@ const Hero = () => {
         <p className="text-lg md:text-2xl mb-8">
           We connect UK & US businesses with world-class digital services.
         </p>
-        <Link
+        {/* <Link
           to="contact"
           smooth={true}
           duration={600}
           className="laser-button bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg cursor-pointer"
         >
           Get Started
-        </Link>
+        </Link> */}
+        <CalendlyPopupButton />
 
       </div>
     </section>

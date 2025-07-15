@@ -15,6 +15,7 @@
       content="automation, web development, lead generation, SaaS, React, ScaleBridge"
     />
     <meta name="author" content="Anson Stephan" />
+    <meta name="robots" content="index, follow" />
 
     <!-- ✅ Open Graph for Social Sharing -->
     <meta property="og:title" content="ScaleBridge — Automate, Build & Grow" />
@@ -24,11 +25,33 @@
     />
     <meta property="og:image" content="/ScaleBridge Logo.png" />
     <meta property="og:url" content="https://scalebridge.netlify.app" />
-    <meta name="twitter:card" content="/ScaleBridge Logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ScaleBridge — Automate, Build & Grow" />
+    <meta
+      name="twitter:description"
+      content="Automation, web development, and lead-gen services crafted to scale."
+    />
+    <meta
+      name="twitter:image"
+      content="https://scalebridge.netlify.app/ScaleBridge%20Logo.png"
+    />
+    <link rel="canonical" href="https://scalebridge.netlify.app" />
+
     <!-- <title>ScaleBridge</title> -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ScaleBridge",
+        "url": "https://scalebridge.netlify.app",
+        "logo": "https://scalebridge.netlify.app/ScaleBridge%20Logo.png",
+        "sameAs": [],
+        "description": "ScaleBridge helps startups and agencies automate operations, build scalable websites, and generate leads with high-impact solutions."
+      }
+    </script>
   </body>
 </html>

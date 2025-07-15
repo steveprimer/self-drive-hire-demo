@@ -63,7 +63,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            smooth={true}
+            
             duration={600}
             className="laser-button bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg text-lg cursor-pointer"
           >
