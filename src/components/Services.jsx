@@ -4,31 +4,34 @@ import { FaRobot, FaCode, FaBullseye } from "react-icons/fa";
 
 const services = [
   {
-    icon: <FaCode size={40} className="text-green-500" />,
+    icon: <FaCode size={32} className="text-green-400" />,
     title: "Custom Business Websites",
     description:
       "Clean, fast-loading websites that build trust and convert visitors — fully responsive across all devices.",
+    image: "/services/web.jpg",
   },
   {
-    icon: <FaRobot size={40} className="text-pink-500" />,
+    icon: <FaRobot size={32} className="text-pink-400" />,
     title: "AI Chatbot Integration",
     description:
       "Automated GPT-powered chatbots that handle 70%+ of customer queries, improving support and reducing manual load.",
+    image: "/services/chatbotin.jpg",
   },
   {
-    icon: <FaBullseye size={40} className="text-purple-500" />,
+    icon: <FaBullseye size={32} className="text-purple-400" />,
     title: "eCommerce Store Setup",
     description:
       "Complete online store builds with product pages, cart, payment integration, and mobile-first design — ready to sell.",
+    image: "/services/ecom.jpg",
   },
   {
-    icon: <FaBullseye size={40} className="text-yellow-400" />,
+    icon: <FaBullseye size={32} className="text-yellow-300" />,
     title: "Lead Capture & Automation",
     description:
       "Integrated Calendly, forms, and smart CTAs to turn traffic into booked calls and leads, even while you sleep.",
+    image: "/services/automation.jpg",
   },
 ];
-
 
 const Services = () => {
   return (
@@ -41,22 +44,25 @@ const Services = () => {
           Our <span className="text-blue-400">Services</span>
         </h2>
 
-        <div className="grid gap-2 sm:gap-4 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
+        <div className="grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4 px-4">
           {services.map((service, index) => (
             <div
               key={index}
               data-aos="fade-up"
-              data-aos-delay={index * 50}
-              className="bg-[#0f172a] border border-blue-800/40 p-2 md:p-6
- rounded-xl shadow-md hover:shadow-blue-700 transition-shadow duration-700 ease-in-out"
+              data-aos-delay={index * 100}
+              className="relative group rounded-xl overflow-hidden shadow-lg border border-blue-800/40"
             >
-              <div className="mb-4 flex justify-center text-blue-400 text-2xl sm:text-3xl md:text-4xl">
-                {service.icon}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition duration-500 group-hover:opacity-40"
+              />
+              {/* Glass Overlay */}
+              <div className="absolute inset-0 backdrop-blur-md bg-white/10 p-4 flex flex-col justify-center items-center text-center transition duration-500 opacity-100 md:opacity-0 md:group-hover:opacity-100">
+                <div className="mb-3">{service.icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-sm text-gray-200">{service.description}</p>
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 text-white">
-                {service.title}
-              </h3>
-              <p className="text-sm sm:text-base text-gray-300">{service.description}</p>
             </div>
           ))}
         </div>
