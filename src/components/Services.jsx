@@ -81,7 +81,7 @@ const Services = () => {
               />
               {/* Overlay */}
               <div
-                className={`absolute inset-0 backdrop-blur-md bg-white/10 p-4 flex flex-col justify-center items-center text-center transition duration-500 ${
+                className={`absolute inset-0 backdrop-blur-md bg-white/10 p-4 flex flex-col justify-center items-center text-center transition duration-300 ${
                   activeIndex === index ? "opacity-100" : "opacity-0"
                 } md:opacity-0 md:group-hover:opacity-100`}
               >
