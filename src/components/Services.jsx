@@ -8,28 +8,44 @@ const services = [
     title: "Custom Business Websites",
     description:
       "Clean, fast-loading websites that build trust and convert visitors — fully responsive across all devices.",
+<<<<<<< HEAD
     image: "/web.jpg",
+=======
+    image: "/services/web.jpg",
+>>>>>>> a78dc51e68c7d736f6caa7ebd0049ad85ba89c22
   },
   {
     icon: <FaRobot size={32} className="text-pink-400" />,
     title: "AI Chatbot Integration",
     description:
       "Automated GPT-powered chatbots that handle 70%+ of customer queries, improving support and reducing manual load.",
+<<<<<<< HEAD
     image: "/Chatbotin.jpg",
+=======
+    image: "/services/chatbotin.jpg",
+>>>>>>> a78dc51e68c7d736f6caa7ebd0049ad85ba89c22
   },
   {
     icon: <FaBullseye size={32} className="text-purple-400" />,
     title: "eCommerce Store Setup",
     description:
       "Complete online store builds with product pages, cart, payment integration, and mobile-first design — ready to sell.",
+<<<<<<< HEAD
     image: "/ecom.jpg",
+=======
+    image: "/services/ecom.jpg",
+>>>>>>> a78dc51e68c7d736f6caa7ebd0049ad85ba89c22
   },
   {
     icon: <FaBullseye size={32} className="text-yellow-300" />,
     title: "Lead Capture & Automation",
     description:
       "Integrated Calendly, forms, and smart CTAs to turn traffic into booked calls and leads, even while you sleep.",
+<<<<<<< HEAD
     image: "/automation.jpg",
+=======
+    image: "/services/automation.jpg",
+>>>>>>> a78dc51e68c7d736f6caa7ebd0049ad85ba89c22
   },
 ];
 
@@ -57,11 +73,16 @@ const Services = () => {
               onClick={() => handleCardClick(index)} // For mobile tap
               data-aos="fade-up"
               data-aos-delay={index * 100}
+<<<<<<< HEAD
               className="relative group rounded-xl overflow-hidden shadow-lg border border-blue-800/40 cursor-pointer"
+=======
+              className="relative group rounded-xl overflow-hidden shadow-lg border border-blue-800/40"
+>>>>>>> a78dc51e68c7d736f6caa7ebd0049ad85ba89c22
             >
               <img
                 src={service.image}
                 alt={service.title}
+<<<<<<< HEAD
                 className={`w-full h-full object-cover transition duration-500 ${
                   activeIndex === index ? "opacity-40" : "opacity-100"
                 } group-hover:opacity-40`}
@@ -72,6 +93,12 @@ const Services = () => {
                   activeIndex === index ? "opacity-100" : "opacity-0"
                 } md:opacity-0 md:group-hover:opacity-100`}
               >
+=======
+                className="w-full h-full object-cover transition duration-500 group-hover:opacity-40"
+              />
+              {/* Glass Overlay */}
+              <div className="absolute inset-0 backdrop-blur-md bg-white/10 p-4 flex flex-col justify-center items-center text-center transition duration-500 opacity-100 md:opacity-0 md:group-hover:opacity-100">
+>>>>>>> a78dc51e68c7d736f6caa7ebd0049ad85ba89c22
                 <div className="mb-3">{service.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                 <p className="text-sm text-gray-200">{service.description}</p>
