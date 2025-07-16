@@ -11,6 +11,15 @@ html, body {
 .active {
   @apply text-blue-600 font-semibold;
 }
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav div[style*="hamburger"] {
+    display: block !important;
+  }
+}
 
 .laser-button {
   position: relative;
@@ -40,4 +49,20 @@ html, body {
 .laser-button:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
 }
