@@ -1,37 +1,19 @@
-import React, { useEffect } from "react";
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Services from "./components/Services"; 
-import Testimonials from "./components/Testimonials"; 
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import OurWork from "./components/OurWork";
-import Chatbot from "./components/Chatbot";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import CarGrid from "./components/CarGrid";
+import FAQ from "./components/FAQ";
+import CTASection from "./components/CTA";
+import ChatBot from "./components/ChatBot";
 
-
-function App() {
-  useEffect(() => {
-  AOS.init({
-    duration: 1500, // ms
-    once: true,    // animate only once
-  });
-}, []);
+export default function App() {
   return (
-    <>
-      {/* <Navbar />  */}
+    <div className="font-sans">
+      <Navbar />
       <Hero />
-      <About />
-      <Services />
-      <OurWork />
-      <Testimonials />
-      <Contact />
-      <Chatbot />
-      <Footer />
-    </>
+      <CarGrid />
+      <FAQ />
+      <CTASection />
+      <ChatBot />
+    </div>
   );
 }
-
-export default App;

@@ -1,75 +1,80 @@
-// import React, { useState } from "react";
-// import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-//   return (
-//     <nav style={styles.navbar}>
-//       <div style={styles.logo}>ScaleBridge</div>
+  const navItems = [
+    { name: "Home", to: "Hero" },
+    { name: "Cars", to: "cars" },
+    { name: "FAQ", to: "faq" },
+    { name: "Book", to: "book" },
+  ];
 
-//       {/* Hamburger Icon */}
-//       <div onClick={() => setIsOpen(!isOpen)} style={styles.hamburger}>
-//         {isOpen ? <FaTimes size={22} color="#fff" /> : <FaBars size={22} color="#fff" />}
-//       </div>
+  return (
+    <>
+      <nav className="fixed w-full z-50 bg-black bg-opacity-40 backdrop-blur-md">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-white">R3ntal Central</h1>
 
-//       {/* Nav Links */}
-//       <ul style={{ ...styles.navLinks, ...(isOpen ? styles.showMenu : styles.hideMenu) }}>
-//         <li><a href="#home" style={styles.link}>Home</a></li>
-//         <li><a href="#services" style={styles.link}>Services</a></li>
-//         <li><a href="#work" style={styles.link}>Our Work</a></li>
-//         <li><a href="#contact" style={styles.link}>Contact</a></li>
-//       </ul>
-//     </nav>
-//   );
-// };
+          {/* Desktop Nav */}
+          <ul className="hidden md:flex space-x-6 text-white font-medium">
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  smooth={true}
+                  duration={200}
+                  spy={true}
+                  offset={-70}
+                  className="hover:text-green-400 cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-// const styles = {
-//   navbar: {
-//     backgroundColor: "#0f172a",
-//     color: "#fff",
-//     padding: "1rem 2rem",
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "space-between",
-//     position: "fixed",
-//     top: 0,
-//     width: "100%",
-//     zIndex: 1000,
-//   },
-//   logo: {
-//     fontWeight: "bold",
-//     fontSize: "1.4rem",
-//   },
-//   hamburger: {
-//     display: "none",
-//     cursor: "pointer",
-//   },
-//   navLinks: {
-//     listStyle: "none",
-//     display: "flex",
-//     gap: "1.5rem",
-//     margin: 0,
-//   },
-//   link: {
-//     color: "#fff",
-//     textDecoration: "none",
-//   },
-//   showMenu: {
-//     display: "flex",
-//     flexDirection: "column",
-//     position: "absolute",
-//     top: "60px",
-//     right: "20px",
-//     backgroundColor: "#0f172a",
-//     padding: "1rem",
-//     border: "1px solid #0095ff",
-//     borderRadius: "8px",
-//   },
-//   hideMenu: {
-//     display: "none",
-//   },
-//   // Mobile styles (applied via media query below)
-// };
+          {/* Mobile Icon */}
+          <div
+            className="md:hidden text-white cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </div>
+        </div>
+      </nav>
 
-// export default Navbar;
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="md:hidden fixed top-0 left-0 w-full h-screen z-40 bg-black/90 text-white flex flex-col">
+          <div className="flex justify-between items-center px-6 py-4 border-b border-white/20">
+            <h1 className="text-2xl font-bold">R3ntal Central</h1>
+            <button onClick={toggleMenu}>
+              <FaTimes size={24} />
+            </button>
+          </div>
+          <ul className="flex-1 flex flex-col items-center justify-center space-y-6 text-lg font-semibold">
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  smooth={true}
+                  duration={600}
+                  spy={true}
+                  offset={-70}
+                  onClick={toggleMenu}
+                  className="hover:text-green-400 capitalize cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </>
+  );
+}
