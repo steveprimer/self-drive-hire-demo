@@ -13,7 +13,7 @@ export default function CTASection() {
         </p>
 
         <a
-          href="https://wa.me/919876543210?text=Hi! I’m interested in booking a self-drive car. Here’s what I need…"
+          href="https://wa.me/+918929838874?text=Hi! I’m interested in booking a self-drive car. Here’s what I need…"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-green-500 hover:bg-green-600 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-md transition duration-300"
